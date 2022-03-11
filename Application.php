@@ -13,6 +13,14 @@ use ineditvision\dev02\db\Database;
  *
  */
 class Application {
+
+    const EVENT_BEFORE_REQUEST = 'beforeRequest';
+    const EVENT_AFTER_REQUEST = 'afterRequest';
+
+    protected $eventListeners = [];         //protected array $eventListeners = [];
+
+    public static $app;                     //public static Application $app;       //PHP >=7.4 - type property
+
     public static $ROOT_DIR;                //public static string $ROOT_DIR;       //PHP >=7.4 - type property
 
     public $layout = 'main';                //public string $layout = 'main';
@@ -26,7 +34,6 @@ class Application {
     public $user;                           //public ?UserModel $user;
     public $view;                           //public View $view;
 
-    public static $app;                     //public static Application $app;       //PHP >=7.4 - type property
     public $controller = null;              //public ?Controller $controller;        //PHP >=7.4 - type property
 
     public function __construct($rootPath, $config) {
@@ -53,17 +60,6 @@ class Application {
 
     public static function isGuest() {
         return !self::$app->user;
-    }
-
-    public function run() {
-        try {
-            echo $this->router->resolve();
-        } catch (\Exception $e) {
-            $this->response->setStatusCode($e->getCode());
-            echo $this->router->renderView('_error', [
-                'exception' => $e
-            ]);
-        }
     }
 
     /**
@@ -96,5 +92,29 @@ class Application {
     public function logout() {
         $this->user = null;
         $this->session->remove('user');
+    }
+
+    public function run() {
+
+        $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
+        try {
+            echo $this->router->resolve();
+        } catch (\Exception $e) {
+            $this->response->setStatusCode($e->getCode());
+            echo $this->router->renderView('_error', [
+                'exception' => $e
+            ]);
+        }
+    }
+
+    public function triggerEvent($eventName) {
+        $callbacks = $this->eventListeners[$eventName] ?? [];
+        foreach ($callbacks as $callback) {
+            call_user_func($callback);
+        }
+    }
+
+    public function on($eventName, $callback) {
+        $this->eventListeners[$eventName][] = $callback;
     }
 }
