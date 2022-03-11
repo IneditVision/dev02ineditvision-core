@@ -9,7 +9,7 @@ use Ineditvision\Dev02Ineditvision\core\db\Database;
  * @author   IneditVision <florin@ineditvision.ro>
  * @package  Ineditvision\Dev02Ineditvision\core
  * 
- * WARNING: type property - requires PHP >= 7.4x
+ * WARNING: type property - requires PHP >= 7.4
  *
  */
 class Application {
