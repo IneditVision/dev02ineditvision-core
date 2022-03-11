@@ -1,12 +1,12 @@
 <?php
 
-namespace Ineditvision\Dev02Ineditvision\core\exception;
+namespace ineditvision\dev02\core\exception;
 
 /**
  * Class NotFoundException
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  Ineditvision\Dev02Ineditvision\core\exception
+ * @package  ineditvision\dev02\core\exception
  *
  */
 class NotFoundException extends \Exception {

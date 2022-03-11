@@ -1,12 +1,12 @@
 <?php
 
-namespace Ineditvision\Dev02Ineditvision\core\form;
+namespace ineditvision\dev02\core\form;
 
 /**
  * Class TextareaField
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  Ineditvision\Dev02Ineditvision\core\form
+ * @package  ineditvision\dev02\core\form
  *
  */
 class TextareaField extends BaseField {

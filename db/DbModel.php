@@ -1,14 +1,14 @@
 <?php
 
-namespace Ineditvision\Dev02Ineditvision\core\db;
-use Ineditvision\Dev02Ineditvision\core\Application;
-use Ineditvision\Dev02Ineditvision\core\Model;
+namespace ineditvision\dev02\core\db;
+use ineditvision\dev02\core\Application;
+use ineditvision\dev02\core\Model;
 
 /**
  * Class DbModel
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  Ineditvision\Dev02Ineditvision\core
+ * @package  ineditvision\dev02\core
  * 
  * - for maping user module to database
  *

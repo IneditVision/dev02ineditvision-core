@@ -1,12 +1,12 @@
 <?php
 
-namespace Ineditvision\Dev02Ineditvision\core\form;
+namespace ineditvision\dev02\core\form;
 
 /**
  * Class InputField - core-form
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  Ineditvision\Dev02Ineditvision\core\form
+ * @package  ineditvision\dev02\core\form
  *
  */
 class InputField extends BaseField {

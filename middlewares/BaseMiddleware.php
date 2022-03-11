@@ -1,13 +1,13 @@
 <?php
 
-namespace Ineditvision\Dev02Ineditvision\core\middlewares;
-//use Ineditvision\Dev02Ineditvision\core\Model;
+namespace ineditvision\dev02\core\middlewares;
+//use ineditvision\dev02\core\Model;
 
 /**
  * Class BaseMiddleware
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  Ineditvision\Dev02Ineditvision\core\middlewares
+ * @package  ineditvision\dev02\core\middlewares
  *
  */
 abstract class BaseMiddleware {

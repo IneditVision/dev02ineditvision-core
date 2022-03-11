@@ -1,13 +1,13 @@
 <?php
 
-namespace Ineditvision\Dev02Ineditvision\core;
-use Ineditvision\Dev02Ineditvision\core\db\Database;
+namespace ineditvision\dev02\core;
+use ineditvision\dev02\core\db\Database;
 
 /**
  * Class Application
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  Ineditvision\Dev02Ineditvision\core
+ * @package  ineditvision\dev02\core
  * 
  * WARNING: type property - requires PHP >= 7.4
  *
@@ -68,15 +68,15 @@ class Application {
     }
 
     /**
-     * @return \IneditVision\Dev02Ineditvision\core\Controller
+     * @return \ineditvision\dev02\core\Controller
      */
-    public function getController(): \IneditVision\Dev02Ineditvision\core\Controller
+    public function getController(): \ineditvision\dev02\core\Controller
     {
         return $this->controller;
     }
 
     /**
-     * @param \IneditVision\Dev02Ineditvision\core\Controller $controller
+     * @param \ineditvision\dev02\core\Controller $controller
      */
     public function setController($controller): void
     {

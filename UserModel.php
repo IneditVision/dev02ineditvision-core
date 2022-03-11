@@ -1,13 +1,13 @@
 <?php
 
-namespace Ineditvision\Dev02Ineditvision\core;
-use Ineditvision\Dev02Ineditvision\core\db\DbModel;
+namespace ineditvision\dev02\core;
+use ineditvision\dev02\core\db\DbModel;
 
 /**
  * Class UserModel
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  Ineditvision\Dev02Ineditvision\core
+ * @package  ineditvision\dev02\core
  *
  */
 abstract class UserModel extends DbModel {

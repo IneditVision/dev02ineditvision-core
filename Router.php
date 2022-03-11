@@ -1,14 +1,14 @@
 <?php
 
-namespace Ineditvision\Dev02Ineditvision\core;
-use Ineditvision\Dev02Ineditvision\core\exception\NotFoundException;
-//use Ineditvision\Dev02Ineditvision\core\Controller;
+namespace ineditvision\dev02\core;
+use ineditvision\dev02\core\exception\NotFoundException;
+//use ineditvision\dev02\core\Controller;
 
 /**
  * Class Router
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  Ineditvision\Dev02Ineditvision\core
+ * @package  ineditvision\dev02\core
  *
  */
 class Router {
@@ -45,7 +45,7 @@ class Router {
         
         if (is_array($callback)) {
             /**
-             ** @var \Ineditvision\Dev02Ineditvision\core\Controller $controller
+             ** @var \ineditvision\dev02\core\Controller $controller
              * - ca sa vada PHPStorm ce tip e sa-i faca omului autocomplete :))
              */
             $controller = new $callback[0]();      //instantiate the class

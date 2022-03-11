@@ -7,5 +7,10 @@
             "email": "florin@ineditvision.ro"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "ineditvision\\dev02-core\\": "./"
+        }
+    },
     "require": {}
 }

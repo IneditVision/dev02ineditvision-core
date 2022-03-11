@@ -1,12 +1,12 @@
 <?php
 
-namespace Ineditvision\Dev02Ineditvision\core;
+namespace ineditvision\dev02\core;
 
 /**
  * Class View
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  Ineditvision\Dev02Ineditvision\core
+ * @package  ineditvision\dev02\core
  * 
  * - for title purposes
  *

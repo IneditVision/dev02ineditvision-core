@@ -1,14 +1,14 @@
 <?php
 
-namespace Ineditvision\Dev02Ineditvision\core\middlewares;
-use Ineditvision\Dev02Ineditvision\core\Application;
-use Ineditvision\Dev02Ineditvision\core\exception\ForbiddenException;
+namespace ineditvision\dev02\core\middlewares;
+use ineditvision\dev02\core\Application;
+use ineditvision\dev02\core\exception\ForbiddenException;
 
 /**
  * Class AuthMiddleware
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  Ineditvision\Dev02Ineditvision\core\middlewares
+ * @package  ineditvision\dev02\core\middlewares
  *
  */
 class AuthMiddleware extends BaseMiddleware {
