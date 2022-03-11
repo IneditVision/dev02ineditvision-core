@@ -1,14 +1,15 @@
 <?php
 
-namespace ineditvision\dev02\core;
+namespace ineditvision\dev02;
 
 /**
  * Class View
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core
+ * @package  ineditvision\dev02
  * 
  * - for title purposes
+ * - moved all methods here
  *
  */
 class View {

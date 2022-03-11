@@ -1,12 +1,12 @@
 <?php
 
-namespace ineditvision\dev02\core;
+namespace ineditvision\dev02;
 
 /**
  * Class Session
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core
+ * @package  ineditvision\dev02
  *
  */
 class Session {
@@ -26,7 +26,6 @@ class Session {
 
     public function setFlash($key, $message) {
 
-        //$_SESSION[self::FLASH_KEY][$key] = $message;
         $_SESSION[self::FLASH_KEY][$key] = [
             'remove' => false,
             'value' => $message

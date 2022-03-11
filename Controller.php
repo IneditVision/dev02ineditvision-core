@@ -1,13 +1,13 @@
 <?php
 
-namespace ineditvision\dev02\core;
-use ineditvision\dev02\core\middlewares\BaseMiddleware;
+namespace ineditvision\dev02;
+use ineditvision\dev02\middlewares\BaseMiddleware;
 
 /**
  * Class Controller
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core
+ * @package  ineditvision\dev02
  * 
  * - base controller class, used for purpose of extension
  *
@@ -18,7 +18,7 @@ class Controller {
     public $action = '';                    //public string $action = '';
 
     /**
-     * @var \ineditvision\dev02\core\middlewares\BaseMiddleware[]
+     * @var \ineditvision\dev02\middlewares\BaseMiddleware[]
      */
     protected array $middlewares = [];
 

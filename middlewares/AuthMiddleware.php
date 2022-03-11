@@ -1,26 +1,26 @@
 <?php
 
-namespace ineditvision\dev02\core\middlewares;
-use ineditvision\dev02\core\Application;
-use ineditvision\dev02\core\exception\ForbiddenException;
+namespace ineditvision\dev02\middlewares;
+use ineditvision\dev02\Application;
+use ineditvision\dev02\exception\ForbiddenException;
 
 /**
  * Class AuthMiddleware
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core\middlewares
+ * @package  ineditvision\dev02\middlewares
  *
  */
 class AuthMiddleware extends BaseMiddleware {
 
-    public array $actions = [];
+    protected array $actions = [];
 
     /**
      * AuthMiddleware constructor.
      * 
      * @param array $actions
      */
-    public function __construct(array $actions = []) {
+    public function __construct($actions = []) {
         $this->actions = $actions;
     }
 

@@ -1,17 +1,15 @@
 <?php
 
-namespace ineditvision\dev02\core\form;
+namespace ineditvision\dev02\form;
 
 /**
  * Class BaseField
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core\form
+ * @package  ineditvision\dev02\form
  *
  */
 abstract class BaseField {
-
-    public const TYPE_TEXT = 'text';
 
     public $model;                          //public Model $model;                  //PHP >=7.4 - type property
     public $attribute;                      //public string $attribute
@@ -33,18 +31,10 @@ abstract class BaseField {
         ',
             $this->model->getLabel($this->attribute),
             $this->renderInput(),
-            /* mutate in renderInput()
-            $this->type,
-            $this->attribute,
-            $this->model->{$this->attribute},
-            $this->model->hasError($this->attribute) ? ' is-invalid' : '',
-            */
             $this->model->getFirstError($this->attribute)
         );
     }
 
-
     abstract public function renderInput(): string;         //'textarea', 'input' etc
-    
 
 }

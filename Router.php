@@ -1,14 +1,14 @@
 <?php
 
-namespace ineditvision\dev02\core;
-use ineditvision\dev02\core\exception\NotFoundException;
-//use ineditvision\dev02\core\Controller;
+namespace ineditvision\dev02;
+use ineditvision\dev02\exception\NotFoundException;
+//use ineditvision\dev02\Controller;
 
 /**
  * Class Router
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core
+ * @package  ineditvision\dev02
  *
  */
 class Router {
@@ -36,8 +36,7 @@ class Router {
         if ($callback === false) {
             $this->response->setStatusCode(404);
             throw new NotFoundException();
-            //return $this->renderView("_404");   //la mine mergea
-            //return $this->renderContent("Not found");
+            //return $this->renderView("_404");   //it also worked this way
         }
         if (is_string($callback)) {
             return $this->renderView($callback);
@@ -45,8 +44,8 @@ class Router {
         
         if (is_array($callback)) {
             /**
-             ** @var \ineditvision\dev02\core\Controller $controller
-             * - ca sa vada PHPStorm ce tip e sa-i faca omului autocomplete :))
+             ** @var \ineditvision\dev02\Controller $controller
+             * - for PHPStorm to see the type in order to use the autocomplete functionality :)
              */
             $controller = new $callback[0]();      //instantiate the class
             Application::$app->controller = $controller;

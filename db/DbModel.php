@@ -1,14 +1,14 @@
 <?php
 
-namespace ineditvision\dev02\core\db;
-use ineditvision\dev02\core\Application;
-use ineditvision\dev02\core\Model;
+namespace ineditvision\dev02\db;
+use ineditvision\dev02\Application;
+use ineditvision\dev02\Model;
 
 /**
  * Class DbModel
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core
+ * @package  ineditvision\dev02
  * 
  * - for maping user module to database
  *
@@ -69,12 +69,4 @@ abstract class DbModel extends Model {
         $statement->execute();
         return $statement->fetchObject(static::class);
     }
-
-        /*
-        echo '<pre>';
-        var_dump($statement, $params, $attributes);
-        echo '</pre>';
-        exit;
-        */
-
 }

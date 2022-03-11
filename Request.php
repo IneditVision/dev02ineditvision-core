@@ -1,12 +1,12 @@
 <?php
 
-namespace ineditvision\dev02\core;
+namespace ineditvision\dev02;
 
 /**
  * Class Request
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core
+ * @package  ineditvision\dev02
  *
  */
 class Request {
@@ -17,7 +17,6 @@ class Request {
             return $path;
         }
         return substr($path, 0, $position);
-
     }
 
     public function method() {
@@ -47,6 +46,5 @@ class Request {
 
         return $body;
     }
-
 
 }

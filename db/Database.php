@@ -1,13 +1,13 @@
 <?php
 
-namespace ineditvision\dev02\core\db;
-use ineditvision\dev02\core\Application;
+namespace ineditvision\dev02\db;
+use ineditvision\dev02\Application;
 
 /**
  * Class Database
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core
+ * @package  ineditvision\dev02
  *
  */
 class Database {
@@ -90,6 +90,5 @@ class Database {
 
     protected function log($message) {
         echo '['.date('Y-m-d H:i:s').'] - '.$message.PHP_EOL;
-
     }
 }

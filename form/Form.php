@@ -1,13 +1,12 @@
 <?php
 
-namespace ineditvision\dev02\core\form;
-//use ineditvision\dev02\core\Model;
+namespace ineditvision\dev02\form;
 
 /**
- * Class Form - core-form
+ * Class Form
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core\form
+ * @package  ineditvision\dev02\form
  *
  */
 class Form {

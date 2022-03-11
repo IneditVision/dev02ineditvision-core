@@ -1,14 +1,12 @@
 <?php
 
-namespace ineditvision\dev02\core;
+namespace ineditvision\dev02;
 
 /**
  * Class Model
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core
- * 
- * - base controller class, used for purpose of extension
+ * @package  ineditvision\dev02
  *
  */
 abstract class Model {
@@ -35,7 +33,7 @@ abstract class Model {
     }
 
     public function getLabel($attribute) {
-        return $this->labels()[$attribute] ?? $attribute;       //daca nu avem label, sa afiseze totusi atributul
+        return $this->labels()[$attribute] ?? $attribute;       //if label not exists, display the attribute
     }
 
     public $errors = [];          //public array $errors = [];

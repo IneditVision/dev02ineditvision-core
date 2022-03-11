@@ -1,26 +1,21 @@
 <?php
 
-namespace ineditvision\dev02\core\form;
+namespace ineditvision\dev02\form;
 
 /**
  * Class TextareaField
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core\form
+ * @package  ineditvision\dev02\form
  *
  */
 class TextareaField extends BaseField {
-
-    public const TYPE_TEXT = 'text';
-    public const TYPE_PASSWORD = 'password';
-    public const TYPE_NUMBER = 'number';
 
     public $type;                           //public string $type;
     public $model;                          //public Model $model;                  //PHP >=7.4 - type property
     public $attribute;                      //public string $attribute
 
     public function __construct($model, $attribute) {
-        //$this->type = self::TYPE_TEXT;
         parent::__construct($model, $attribute);
     }
 

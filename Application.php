@@ -1,13 +1,13 @@
 <?php
 
-namespace ineditvision\dev02\core;
-use ineditvision\dev02\core\db\Database;
+namespace ineditvision\dev02;
+use ineditvision\dev02\db\Database;
 
 /**
  * Class Application
  * 
  * @author   IneditVision <florin@ineditvision.ro>
- * @package  ineditvision\dev02\core
+ * @package  ineditvision\dev02
  * 
  * WARNING: type property - requires PHP >= 7.4
  *
@@ -15,22 +15,22 @@ use ineditvision\dev02\core\db\Database;
 class Application {
     public static $ROOT_DIR;                //public static string $ROOT_DIR;       //PHP >=7.4 - type property
 
-    public string $layout = 'main';
+    public $layout = 'main';                //public string $layout = 'main';
     public $userClass;                      //public string $userClass;
     public $router;                         //public Router $router;                //PHP >=7.4 - type property
     public $request;                        //public Request $request;              //PHP >=7.4 - type property
     public $response;                       //public Response $response;            //PHP >=7.4 - type property
     public $session;                        //public Session $session;
     public $db;                             //public Database $db;
-    // cu ? in fata pt ca poate fi null [pt guesti]
-    //public ?UserModel $user;
-    public $user;                           //public DbModel ?$user;
+    // for guests can be null, so ? in front in PHP >=7.4
+    public $user;                           //public ?UserModel $user;
     public $view;                           //public View $view;
 
     public static $app;                     //public static Application $app;       //PHP >=7.4 - type property
     public $controller = null;              //public ?Controller $controller;        //PHP >=7.4 - type property
 
     public function __construct($rootPath, $config) {
+
         $this->userClass = $config['userClass'];
         self::$ROOT_DIR = $rootPath;
         self::$app = $this;
@@ -64,19 +64,18 @@ class Application {
                 'exception' => $e
             ]);
         }
-        
     }
 
     /**
-     * @return \ineditvision\dev02\core\Controller
+     * @return \ineditvision\dev02\Controller
      */
-    public function getController(): \ineditvision\dev02\core\Controller
+    public function getController(): \ineditvision\dev02\Controller
     {
         return $this->controller;
     }
 
     /**
-     * @param \ineditvision\dev02\core\Controller $controller
+     * @param \ineditvision\dev02\Controller $controller
      */
     public function setController($controller): void
     {
@@ -94,11 +93,8 @@ class Application {
         return true;
     }
 
-
     public function logout() {
         $this->user = null;
         $this->session->remove('user');
     }
-
-
 }
