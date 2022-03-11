@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "ineditvision\\dev02-core\\": "./"
+            "ineditvision\\dev02\\": "./"
         }
     },
     "require": {}
