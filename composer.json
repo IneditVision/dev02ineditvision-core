@@ -1,0 +1,16 @@
+{
+    "name": "ineditvision/dev02-core",
+    "description": "dev02 - MVC core package",
+    "autoload": {
+        "psr-4": {
+            "Ineditvision\\Dev02Core\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "IneditVision",
+            "email": "florin@ineditvision.ro"
+        }
+    ],
+    "require": {}
+}
