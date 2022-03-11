@@ -95,7 +95,6 @@ class Application {
     }
 
     public function run() {
-
         $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
         try {
             echo $this->router->resolve();
