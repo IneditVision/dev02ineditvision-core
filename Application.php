@@ -94,7 +94,7 @@ class Application {
         $this->session->remove('user');
     }
 
-    public function run() {
+    public function run() { 
 
         $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
         try {
