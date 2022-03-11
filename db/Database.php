@@ -11,7 +11,7 @@ use Ineditvision\Dev02Ineditvision\core\Application;
  *
  */
 class Database {
-    public $pdo;                            //public \PDO $pdo;     //pt PHP >=7.4
+    public $pdo;                            //public \PDO $pdo;     //pt PHP >=7.4s
 
     public function __construct($config) {
         $dsn = $config['dsn'] ?? '';
