@@ -4,7 +4,7 @@ namespace Ineditvision\Dev02Ineditvision\core\db;
 use Ineditvision\Dev02Ineditvision\core\Application;
 
 /**
- * Class Database - test
+ * Class Database
  * 
  * @author   IneditVision <florin@ineditvision.ro>
  * @package  Ineditvision\Dev02Ineditvision\core
